@@ -2,16 +2,16 @@
 
 - 排序
   - 插入排序
-    - [直接插入](sort/insertionsort.go)
-    - [Shell排序](sort/shellsort.go)[↓](#2-shellsort-希尔排序)
+    - [直接插入](sort/insertionsort.go)[页内跳转](#1-insertion-插入排序)
+    - [Shell排序](sort/shellsort.go)[页内跳转](#2-shellsort-希尔排序)
   - 选择排序
-    - [直接选择](sort/selectionsort.go)
-    - [堆排序](sort/heapsort.go)
+    - [直接选择](sort/selectionsort.go)[页内跳转](#3-selectionsort-选择排序)
+    - [堆排序](sort/heapsort.go)[页内跳转](#4-heapsort-堆排序)
   - 交换排序
-    - [冒泡排序](sort/bubblesort.go)
-    - [快速排序](sort/quicksort.go)
-  - [归并排序](sort/mergesort.go)
-  - [基数排序](sort/radixsort.go)
+    - [冒泡排序](sort/bubblesort.go)[页内跳转](#5-bubblesort-冒泡排序)
+    - [快速排序](sort/quicksort.go)[页内跳转](#6-quicksort-快速排序)
+  - [归并排序](sort/mergesort.go)[页内跳转](#7-mergesort-归并排序)
+  - [基数排序](sort/radixsort.go)[页内跳转](#8-radixsort-基数排序)
 
 ## Time and space complexity of various sorting algorithms
 <center><table>
@@ -116,7 +116,7 @@ func InsertionSort(nums []int) []int {
 	return nums
 }
 ```
-2. ShellSort 希尔排序
+### 2. ShellSort 希尔排序
 ```golang
 // ShellSort 希尔排序 不稳定
 // 时间复杂度：平均 O(n^1.3) 最好 O(n) 最坏 O(n^2) 
@@ -135,7 +135,7 @@ func ShellSort(nums []int) []int {
 	return nums
 }
 ```
-3. SelectionSort 选择排序
+### 3. SelectionSort 选择排序
 ```golang
 // SelectionSort 直接选择排序 不稳定
 // 时间复杂度：平均 O(n^2) 最好 O(n^2) 最坏 O(n^2) 
@@ -153,7 +153,7 @@ func SelectionSort(nums []int) []int {
 	return nums
 }
 ```
-4. HeapSort 堆排序
+### 4. HeapSort 堆排序
 ```golang
 // HeapSort 堆排序 不稳定
 // 时间复杂度：平均 O(nlogn) 最好 O(nlogn) 最坏 O(nlogn)
@@ -183,8 +183,7 @@ func heapify(nums []int) []int {
 	return nums
 }
 ```
-
-5. BubbleSort 冒泡排序
+### 5. BubbleSort 冒泡排序
 ```golang
 // BubbleSort 冒泡排序 稳定
 // 时间复杂度：平均 O(n^2) 最好 O(n) 最坏 O(n^2) 
@@ -200,7 +199,7 @@ func BubbleSort(nums []int) []int {
 	return nums
 }
 ```
-6. QuickSort 快速排序
+### 6. QuickSort 快速排序
 ```golang
 // QuickSort 快速排序 不稳定
 // 时间复杂度：平均 O(nlogn) 最好 O(nlogn) 最坏 O(n^2) 
@@ -226,7 +225,7 @@ func QuickSort(nums []int) []int {
 	return nums
 }
 ```
-7. MergeSort 归并排序
+### 7. MergeSort 归并排序
 ```golang
 // MergeSort 归并排序 稳定
 // 时间复杂度：平均 O(nlogn) 最好 O(nlogn) 最坏 O(nlogn)
@@ -259,7 +258,7 @@ func merge(nums, temp []int, l, r int) {
 	}
 }
 ```
-8. RadixSort 基数排序
+### 8. RadixSort 基数排序
 ```golang
 // RadixSort 基数排序 稳定 r代表基数 d代表长度
 // 时间复杂度：平均 O(d(r+n)) 最好 O(d(n+rd)) 最坏 O(d(r+n)) 
