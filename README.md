@@ -3,7 +3,7 @@
 - 排序
   - 插入排序
     - [直接插入](sort/insertionsort.go)
-    - [Shell排序](sort/shellsort.go)
+    - [Shell排序](sort/shellsort.go)[↓](#2-shellsort-希尔排序)
   - 选择排序
     - [直接选择](sort/selectionsort.go)
     - [堆排序](sort/heapsort.go)
@@ -95,8 +95,9 @@
     <td align="center">O(rd+n)</td>
     <td align="center">稳定</td>
   </tr>
+</table></center>
 
-说明： 希尔排序根据不同的增量序列得到的复杂度分析也不同，这里取N//2。
+说明: 希尔排序根据不同的增量序列得到的复杂度分析也不同，这里取N//2。
 
 1. InsertionSort 插入排序
 ```golang
