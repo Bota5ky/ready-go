@@ -16,11 +16,11 @@
 # Time and space complexity of various sorting algorithms
   <escape><table align="center">
   <tr>
-    <td rowspan="2" align="center">类别</td>
-    <td rowspan="2" align="center">排序方法</td>
-    <td colspan="3" align="center">时间复杂度</td>
-    <td align="center">空间复杂度</td>
-    <td rowspan="2" align="center">稳定性</td>
+    <th rowspan="2" align="center">类别</th>
+    <th rowspan="2" align="center">排序方法</th>
+    <th colspan="3" align="center">时间复杂度</th>
+    <th align="center">空间复杂度</th>
+    <th rowspan="2" align="center">稳定性</th>
   </tr>
   <tr>
     <td align="center">平均情况</td>
