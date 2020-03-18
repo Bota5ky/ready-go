@@ -2,16 +2,16 @@
 
 - 排序
   - 插入排序
-    - [直接插入](sort/insertionsort.go)[页内跳转](#1-insertion-插入排序)
-    - [Shell排序](sort/shellsort.go)[页内跳转](#2-shellsort-希尔排序)
+    - [直接插入](sort/insertionsort.go)  [页内跳转](#1-insertionsort-插入排序)
+    - [Shell排序](sort/shellsort.go)  [页内跳转](#2-shellsort-希尔排序)
   - 选择排序
-    - [直接选择](sort/selectionsort.go)[页内跳转](#3-selectionsort-选择排序)
-    - [堆排序](sort/heapsort.go)[页内跳转](#4-heapsort-堆排序)
+    - [直接选择](sort/selectionsort.go)  [页内跳转](#3-selectionsort-选择排序)
+    - [堆排序](sort/heapsort.go)  [页内跳转](#4-heapsort-堆排序)
   - 交换排序
-    - [冒泡排序](sort/bubblesort.go)[页内跳转](#5-bubblesort-冒泡排序)
-    - [快速排序](sort/quicksort.go)[页内跳转](#6-quicksort-快速排序)
-  - [归并排序](sort/mergesort.go)[页内跳转](#7-mergesort-归并排序)
-  - [基数排序](sort/radixsort.go)[页内跳转](#8-radixsort-基数排序)
+    - [冒泡排序](sort/bubblesort.go)  [页内跳转](#5-bubblesort-冒泡排序)
+    - [快速排序](sort/quicksort.go)  [页内跳转](#6-quicksort-快速排序)
+  - [归并排序](sort/mergesort.go)  [页内跳转](#7-mergesort-归并排序)
+  - [基数排序](sort/radixsort.go)  [页内跳转](#8-radixsort-基数排序)
 
 ## Time and space complexity of various sorting algorithms
 <center><table>
