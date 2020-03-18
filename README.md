@@ -1,5 +1,4 @@
 # Ready-Go
-
 ## 一、排序
 - 插入排序
   - [直接插入](sort/insertionsort.go)&emsp;&emsp;[页内跳转](#1-InsertionSort-插入排序)
