@@ -13,7 +13,7 @@
   - [归并排序](sort/mergesort.go)
   - [基数排序](sort/radixsort.go)
 
-# Time and space complexity of various sorting algorithms
+## Time and space complexity of various sorting algorithms
 <center><table align="center">
   <tr>
     <th rowspan="2" align="center">类别</th>
