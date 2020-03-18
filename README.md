@@ -2,16 +2,16 @@
 
 - 排序
   - 插入排序
-    - [直接插入](sort/insertionsort.go)
-    - [Shell排序](sort/shellsort.go)
+    - [直接插入](sort/insertionsort.go)[↓](###1. InsertionSort 插入排序)
+    - [Shell排序](sort/shellsort.go)[↓](###2. ShellSort 希尔排序)
   - 选择排序
-    - [直接选择](sort/selectionsort.go)
-    - [堆排序](sort/heapsort.go)
+    - [直接选择](sort/selectionsort.go)[↓](###1. InsertionSort 插入排序)
+    - [堆排序](sort/heapsort.go)[↓](###1. InsertionSort 插入排序)
   - 交换排序
-    - [冒泡排序](sort/bubblesort.go)
-    - [快速排序](sort/quicksort.go)
-  - [归并排序](sort/mergesort.go)
-  - [基数排序](sort/radixsort.go)
+    - [冒泡排序](sort/bubblesort.go)[↓](###1. InsertionSort 插入排序)
+    - [快速排序](sort/quicksort.go)[↓](###1. InsertionSort 插入排序)
+  - [归并排序](sort/mergesort.go)[↓](###1. InsertionSort 插入排序)
+  - [基数排序](sort/radixsort.go)[↓](###1. InsertionSort 插入排序)
 
 ## Time and space complexity of various sorting algorithms
 <center><table>
@@ -97,9 +97,9 @@
   </tr>
 </table></center>
 
- :fa-star: 希尔排序根据不同的增量序列得到的复杂度分析也不同，这里取N//2。
+说明：希尔排序根据不同的增量序列得到的复杂度分析也不同，这里取N//2。
 
-1. InsertionSort 插入排序
+### 1. InsertionSort 插入排序
 ```golang
 // InsertionSort 插入排序 稳定
 // 时间复杂度：平均 O(n^2) 最好 O(n) 最坏 O(n^2) 
@@ -116,7 +116,7 @@ func InsertionSort(nums []int) []int {
 	return nums
 }
 ```
-2. ShellSort 希尔排序
+### 2. ShellSort 希尔排序
 ```golang
 // ShellSort 希尔排序 不稳定
 // 时间复杂度：平均 O(n^1.3) 最好 O(n) 最坏 O(n^2) 
@@ -135,7 +135,7 @@ func ShellSort(nums []int) []int {
 	return nums
 }
 ```
-3. SelectionSort 选择排序
+### 3. SelectionSort 选择排序
 ```golang
 // SelectionSort 直接选择排序 不稳定
 // 时间复杂度：平均 O(n^2) 最好 O(n^2) 最坏 O(n^2) 
