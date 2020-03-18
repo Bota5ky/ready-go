@@ -14,7 +14,7 @@
   - [基数排序](sort/radixsort.go)
 
 # Time and space complexity of various sorting algorithms
-  <escape><table align="center">
+<table align="center">
   <tr>
     <th rowspan="2" align="center">类别</th>
     <th rowspan="2" align="center">排序方法</th>
@@ -95,4 +95,4 @@
     <td align="center">O(rd+n)</td>
     <td align="center">稳定</td>
   </tr>
-</table></escape>
+</table>
