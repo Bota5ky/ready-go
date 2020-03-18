@@ -31,26 +31,26 @@
   <tr>
     <td rowspan="2" align="center">插入排序</td>
     <td align="center">直接插入</td>
-    <td align="center">O(n^2)</td>
+    <td align="center">O(n<sub>2</sub>)</td>
     <td align="center">O(n)</td>
-    <td align="center">O(n^2)</td>
+    <td align="center">O(n<sub>2</sub>)</td>
     <td align="center">O(1)</td>
     <td align="center">稳定</td>
   </tr>
   <tr>
     <td align="center">Shell排序</td>
-    <td align="center">O(n^1.3)</td>
+    <td align="center">O(n<sub>1.3</sub>)</td>
     <td align="center">O(n)</td>
-    <td align="center">O(n^2)</td>
+    <td align="center">O(n<sub>2</sub>)</td>
     <td align="center">O(1)</td>
     <td align="center">不稳定</td>
   </tr>
   <tr>
     <td rowspan="2" align="center">选择排序</td>
     <td align="center">直接选择</td>
-    <td align="center">O(n^2)</td>
-    <td align="center">O(n^2)</td>
-    <td align="center">O(n^2)</td>
+    <td align="center">O(n<sub>2</sub>)</td>
+    <td align="center">O(n<sub>2</sub>)</td>
+    <td align="center">O(n<sub>2</sub>)</td>
     <td align="center">O(1)</td>
     <td align="center">不稳定</td>
   </tr>
@@ -65,9 +65,9 @@
   <tr>
     <td rowspan="2" align="center">交换排序</td>
     <td align="center">冒泡排序</td>
-    <td align="center">O(n^2)</td>
+    <td align="center">O(n<sub>2</sub>)</td>
     <td align="center">O(n)</td>
-    <td align="center">O(n^2)</td>
+    <td align="center">O(n<sub>2</sub>)</td>
     <td align="center">O(1)</td>
     <td align="center">稳定</td>
   </tr>
@@ -75,7 +75,7 @@
     <td align="center">快速排序</td>
     <td align="center">O(nlogn)</td>
     <td align="center">O(nlogn)</td>
-    <td align="center">O(n^2)</td>
+    <td align="center">O(n<sub>2</sub>)</td>
     <td align="center">O(nlogn)</td>
     <td align="center">不稳定</td>
   </tr>
@@ -96,6 +96,7 @@
     <td align="center">稳定</td>
   </tr>
 </table></center>
+*
 
 1. InsertionSort 插入排序
 ```golang
