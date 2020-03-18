@@ -97,7 +97,7 @@
   </tr>
 </table></center>
 
-:fa-star: 希尔排序根据不同的增量序列得到的复杂度分析也不同，这里取N//2。
+ :fa-star: 希尔排序根据不同的增量序列得到的复杂度分析也不同，这里取N//2。
 
 1. InsertionSort 插入排序
 ```golang
