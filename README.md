@@ -99,7 +99,7 @@
 
 说明: 希尔排序根据不同的增量序列得到的复杂度分析也不同，这里取N//2。
 
-1. InsertionSort 插入排序
+### 1. InsertionSort 插入排序
 ```golang
 // InsertionSort 插入排序 稳定
 // 时间复杂度：平均 O(n^2) 最好 O(n) 最坏 O(n^2) 
