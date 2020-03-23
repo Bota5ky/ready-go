@@ -360,5 +360,5 @@ func postorderTraversal(root *TreeNode) []int {
 
 ```
 ## 三、位运算
-1. 绝对值的位运算，以int32为例：(var ^ (var >> 31)) - (var >> 31)。
+1. 绝对值的位运算，以int32为例：`(var ^ (var >> 31)) - (var >> 31)`。
 
