@@ -1,11 +1,11 @@
 package sort
 
 // QuickSort 快速排序 不稳定
-// 时间复杂度：平均 O(nlogn) 最好 O(nlogn) 最坏 O(n^2) 
+// 时间复杂度：平均 O(nlogn) 最好 O(nlogn) 最坏 O(n^2)
 // 空间复杂度：O(nlogn)
-func QuickSort(nums []int) []int {
+func QuickSort(nums []int) {
 	if len(nums) < 2 {
-		return nums
+		return
 	}
 	pivot := nums[0]
 	i, j := 0, len(nums)-1
@@ -21,5 +21,4 @@ func QuickSort(nums []int) []int {
 	nums[i] = pivot
 	QuickSort(nums[:i])
 	QuickSort(nums[i+1:])
-	return nums
 }

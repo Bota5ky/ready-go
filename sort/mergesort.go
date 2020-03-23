@@ -3,10 +3,9 @@ package sort
 // MergeSort 归并排序 稳定
 // 时间复杂度：平均 O(nlogn) 最好 O(nlogn) 最坏 O(nlogn)
 // 空间复杂度：O(n)
-func MergeSort(nums []int) []int {
+func MergeSort(nums []int) {
 	temp := make([]int, len(nums))
 	merge(nums, temp, 0, len(nums)-1)
-	return nums
 }
 
 func merge(nums, temp []int, l, r int) {
