@@ -290,74 +290,19 @@ func MSD(nums []int) {
 	//先按其主位排好序 --> 然后对每一个主位桶再进行内部的次位优先基数排序 --> 最后统一收集
 }
 ```
-## 二、二叉树遍历（迭代）
+## 二、二叉树的迭代遍历
+- [前序](https://github.com/Bota5ky/leetcode/blob/master/144.go)
+- [中序](https://github.com/Bota5ky/leetcode/blob/master/94.go)
+- [后序](https://github.com/Bota5ky/leetcode/blob/master/145.go)
+- 模板
 ```golang
-/* 前序 */
-func preorderTraversal(root *TreeNode) []int {
-	var res []int
-	if root == nil {
-		return []int{}
-	}
-	stack := []*TreeNode{root} //从根节点开始
-	for len(stack) > 0 {
-		node := stack[len(stack)-1]
-		stack = stack[:len(stack)-1] //每次迭代弹出当前栈顶元素
-		res = append(res, node.Val)
-		if node.Right != nil {
-			stack = append(stack, node.Right) //并将其孩子节点压入栈中
-		}
-		if node.Left != nil {
-			stack = append(stack, node.Left) //先压右孩子再压左孩子
-		}
-	}
-	return res
-}
-```
-```golang
-/* 中序 */
-func inorderTraversal(root *TreeNode) []int {
-	if root == nil {
-		return []int{}
-	}
-	var res []int
-	stack := []*TreeNode{}
-	cur := root
-	for cur != nil || len(stack) > 0 {
-		for cur != nil {
-			stack = append(stack, cur)	//有左孩子就一直压入
-			cur = cur.Left
-		}
-		cur = stack[len(stack)-1]
-		stack = stack[:len(stack)-1]	//弹出当前栈顶元素
-		res = append(res, cur.Val)
-		cur = cur.Right					//查看右孩子
-	}
-	return res
-}
-
-```
-```golang
-/* 后序 */
-func postorderTraversal(root *TreeNode) []int {
-	var res []int
-	if root == nil {
-		return []int{}
-	}
-	stack := []*TreeNode{root} //从根节点开始
-	for len(stack) > 0 {
-		node := stack[len(stack)-1]
-		stack = stack[:len(stack)-1] //每次迭代弹出当前栈顶元素
-		res = append([]int{node.Val}, res...)
-		if node.Left != nil {
-			stack = append(stack, node.Left) //并将其孩子节点压入栈中
-		}
-		if node.Right != nil {
-			stack = append(stack, node.Right) //先压左孩子再压右孩子
-		}
-	}
-	return res
-}
-
+for cur!=nil || len(stack)>0 {
+        if cur!=nil {
+            ...
+        }else{
+            ...
+        }
+    }
 ```
 ## 三、位运算
 1. 绝对值的位运算，以int32为例：`(var ^ (var >> 31)) - (var >> 31)`。
