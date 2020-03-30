@@ -299,3 +299,25 @@ for cur!=nil || len(stack)>0 {
 1. 绝对值的位运算，以int32为例：`(var ^ (var >> 31)) - (var >> 31)`。
 2. 交换两个数字：`a = a^b` `b = a^b` `a = a^b`
 3. 最后一位抹0：`n &= (n - 1)`
+## 字符串
+- 常用的字符串拼接方法：`+`,`fmt.Sprintf()`,`strings.Join()`
+```golang
+s1 := "字符串"
+s2 := "拼接"
+//定义Buffer类型
+var bt bytes.Buffer
+//向bt中写入字符串
+bt.WriteString(s1)
+bt.WriteString(s2)
+//获得拼接后的字符串
+s3 := bt.String()
+```
+```golang
+s1 := "字符串"
+s2 := "拼接"
+var build strings.Builder
+build.WriteString(s1)
+build.WriteString(s2)
+s3 := build.String()
+```
+
