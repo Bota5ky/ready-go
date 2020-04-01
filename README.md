@@ -298,9 +298,9 @@ for cur!=nil || len(stack)>0 {
 ## 三、位运算
 1. 绝对值的位运算，以int32为例：`(var ^ (var >> 31)) - (var >> 31)`。
 2. 交换两个数字：`a = a^b` `b = a^b` `a = a^b`
-3. 最后一位抹0：`n &= (n - 1)`
+3. 最右边的1变为0：`n &= (n - 1)`
 ## 字符串
-- 常用的字符串拼接方法：`+`,`fmt.Sprintf()`,`strings.Join()`
+- 常用的字符串拼接方法：`+`,`fmt.Sprintf()`,`strings.Join()`,以下还有2种
 ```golang
 s1 := "字符串"
 s2 := "拼接"
