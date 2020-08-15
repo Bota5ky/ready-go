@@ -15,5 +15,6 @@ func main() {
 }
 
 func f1(w http.ResponseWriter, r *http.Request) {
-	
+	//解析模板
+	//渲染模板
 }
