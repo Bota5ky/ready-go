@@ -16,6 +16,7 @@ func main() {
 	// })
 	//加载静态文件
 	r.Static("/xxx", "./statics")
+	//解析模板文件
 	r.LoadHTMLGlob("templates/**/*")
 	r.GET("/index", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "posts/index.html", gin.H{
