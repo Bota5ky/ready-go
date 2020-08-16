@@ -1,6 +1,7 @@
 package main
 
 import (
+	"html/template"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -8,10 +9,16 @@ import (
 
 func main() {
 	r := gin.Default()
-	r.GET("/hello", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"1":"ssaasdas",
+	// r.SetFuncMap(template.FuncMap{
+	// 	"safe": func(str string) template.HTML {
+	// 		return template.HTML(str)
+	// 	},
+	// })
+	r.LoadHTMLGlob("templates/**/*")
+	r.GET("/index", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "posts/index.html", gin.H{
+			"title": template.HTML("<a href='https://liwenzhou.com'>李文周的博客</a>"),
 		})
 	})
-	r.Run()
+	r.Run(":9090")
 }
