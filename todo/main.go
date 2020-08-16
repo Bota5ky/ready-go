@@ -14,6 +14,8 @@ func main() {
 	// 		return template.HTML(str)
 	// 	},
 	// })
+	//加载静态文件
+	r.Static("/xxx", "./statics")
 	r.LoadHTMLGlob("templates/**/*")
 	r.GET("/index", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "posts/index.html", gin.H{
