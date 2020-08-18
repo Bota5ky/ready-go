@@ -20,5 +20,11 @@ func main() {
 			"Password": password,
 		})
 	})
+	userGroup := r.Group("/user")
+	{
+		userGroup.GET("/info", func(c *gin.Context) {
+			c.HTML(http.StatusOK, "index.html", nil)
+		})
+	}
 	r.Run(":8006")
 }
