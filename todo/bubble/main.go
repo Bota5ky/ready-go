@@ -76,13 +76,13 @@ func main() {
 			if !ok {
 				c.JSON(http.StatusOK, gin.H{"error": "invalid ID"})
 				return
-			} else {
-				if err=DB.Where("id=?", id).Delete(Todo{}).Error;err!=nil {
-					c.JSON(http.StatusOK, gin.H{"error":err.Error()})
-				}else{
-					c.JSON(http.StatusOK, gin.H{id:"deleted!"})
-				}
 			}
+			if err = DB.Where("id=?", id).Delete(Todo{}).Error; err != nil {
+				c.JSON(http.StatusOK, gin.H{"error": err.Error()})
+			} else {
+				c.JSON(http.StatusOK, gin.H{id: "deleted!"})
+			}
+
 		})
 		//改
 		v1Group.PUT("/todo/:id", func(c *gin.Context) {
@@ -109,10 +109,9 @@ func main() {
 			var todoList []Todo
 			if err = DB.Find(&todoList).Error; err != nil {
 				c.JSON(http.StatusOK, gin.H{"error": err.Error()})
-				return 
-			} else {
-				c.JSON(http.StatusOK, todoList)
+				return
 			}
+			c.JSON(http.StatusOK, todoList)
 		})
 		//查看一个
 		v1Group.GET("/todo/:id", func(c *gin.Context) {})
