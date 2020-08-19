@@ -77,7 +77,7 @@ func main() {
 				c.JSON(http.StatusOK, gin.H{"error": "invalid ID"})
 				return
 			}
-			if err = DB.Where("id=?", id).Delete(Todo{}).Error; err != nil {
+			if err = DB.Where("id=?", id).Delete(&Todo{}).Error; err != nil {
 				c.JSON(http.StatusOK, gin.H{"error": err.Error()})
 			} else {
 				c.JSON(http.StatusOK, gin.H{id: "deleted!"})
