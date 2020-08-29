@@ -11,6 +11,7 @@ func main() {
 	}
 }
 
+//List 画链
 func List(list []int) *ListNode {
 	if len(list) == 0 {
 		return nil
