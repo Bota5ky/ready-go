@@ -4,10 +4,43 @@ func main() {
 
 }
 
-func revese2(p *ListNode,k int){
-
+func reveseK(head *ListNode, k int) *ListNode {
+	temp := head
+	for i := 0; i < k; i++ {
+		if temp == nil {
+			break
+		}
+		temp = temp.Next
+	}
+	pre := reveseK(temp, k)
+	rear := head.Next
+	for i := 0; i < k; i++ {
+		head.Next = pre
+		pre = head
+		head = rear
+		if rear != nil {
+			rear = rear.Next
+		}
+	}
+	return pre
 }
 
+func reveseAll(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+	var pre *ListNode
+	rear := head.Next
+	for head != nil {
+		head.Next = pre
+		pre = head
+		head = rear
+		if rear != nil {
+			rear = rear.Next
+		}
+	}
+	return pre
+}
 
 //ListNode 链表
 type ListNode struct {
@@ -45,3 +78,5 @@ func reveseList(p *ListNode) *ListNode {
 // 解析
 
 // 原文： https://juejin.im/post/5d4f76325188253b49244dd0
+
+// 解析： 先全翻转，再每K段翻转，再全翻转
