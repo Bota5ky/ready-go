@@ -1,14 +1,35 @@
 package main
 
 func main() {
+	nums := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	head := List(nums)
+	newHead:=reveseAll(reveseK(reveseAll(head), 3))
+	//newHead:=reveseK(head, 2)
+	for newHead!=nil {
+		print(newHead.Val,"->")
+		newHead=newHead.Next
+	}
+}
 
+func List(list []int) *ListNode {
+	if len(list) == 0 {
+		return nil
+	}
+	pre := &ListNode{}
+	ret := pre
+	for i := 0; i < len(list); i++ {
+		node := &ListNode{list[i], nil}
+		pre.Next = node
+		pre = node
+	}
+	return ret.Next
 }
 
 func reveseK(head *ListNode, k int) *ListNode {
 	temp := head
 	for i := 0; i < k; i++ {
 		if temp == nil {
-			break
+			return head
 		}
 		temp = temp.Next
 	}
