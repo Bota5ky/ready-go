@@ -19,19 +19,6 @@ var cfg = new(conf.AppConf)
 //bin\windows\kafka-server-start.bat config\server.properties
 //kafka终端做消费
 //bin\windows\kafka-console-consumer.bat --bootstrap-server=127.0.0.1:9092 --topic=web_log --from beginning
-func run() {
-	//1.read log
-	for {
-		select {
-		case line := <-taillog.ReadChan():
-			//2.send msg to kafka
-			kafka.SendToKafka(cfg.KafkaConf.Topic, line.Text)
-		default:
-			time.Sleep(time.Second)
-		}
-	}
-}
-
 func main() {
 	// 0. 加载配置文件
 	err := ini.MapTo(cfg, "./conf/config.ini")
@@ -54,5 +41,17 @@ func main() {
 	}
 	fmt.Println("init taillog success.")
 	run()
+}
 
+func run() {
+	//1.read log
+	for {
+		select {
+		case line := <-taillog.ReadChan():
+			//2.send msg to kafka
+			kafka.SendToKafka(cfg.KafkaConf.Topic, line.Text)
+		default:
+			time.Sleep(time.Second)
+		}
+	}
 }
