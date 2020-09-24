@@ -29,7 +29,7 @@ func Init(fileName string) (err error) {
 	return
 }
 
-//ReadChan 发送数据
+//ReadChan chan收到数据
 func ReadChan() <-chan *tail.Line {
 	return tailObj.Lines
 }

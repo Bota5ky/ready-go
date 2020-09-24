@@ -12,6 +12,13 @@ import (
 
 var cfg = new(conf.AppConf)
 
+//启动Kafka  在Kafka目录下
+//zookeeper维护kafka集群列表，有多少台机器是由它来登记的
+//bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+//启动kafka
+//bin\windows\kafka-server-start.bat config\server.properties
+//kafka终端做消费
+//bin\windows\kafka-console-consumer.bat --bootstrap-server=127.0.0.1:9092 --topic=web_log --from beginning
 func run() {
 	//1.read log
 	for {
