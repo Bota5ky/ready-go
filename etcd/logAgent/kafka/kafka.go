@@ -47,12 +47,13 @@ func sendToKafka(logDataChan <-chan *logData) {
 			msg.Topic = ld.topic
 			msg.Value = sarama.StringEncoder(ld.data)
 			//发送到Kafka
-			pid, offset, err := client.SendMessage(msg)
+			_, _, err := client.SendMessage(msg)
 			if err != nil {
-				fmt.Println("send msg failed,err:", err)
+				fmt.Println("send msg failed, err:", err)
 				return
 			}
-			fmt.Printf("pid:%v offset:%v\n", pid, offset)
+			//fmt.Printf("pid:%v offset:%v\n", pid, offset)
+			fmt.Printf("get log from d:/Seminar/LearnGo/ready-go/tmp/, log:%s\n", ld.data)
 		default:
 			time.Sleep(time.Millisecond * 50)
 		}
