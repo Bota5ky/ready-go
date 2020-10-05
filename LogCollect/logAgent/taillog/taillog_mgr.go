@@ -35,7 +35,7 @@ func Init(logEntryConf []*etcd.LogEntry) {
 	go tskMgr.run()
 }
 
-// 监听自己的newConfChan ,有新的配置过来就做对应的处
+// 监听自己的newConfChan ,有新的配置过来就做对应的处理
 func (t *tailLogMgr) run() {
 	for {
 		select {
