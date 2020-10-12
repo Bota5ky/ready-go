@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"CLI/internal/word/timer"
+	"CLI/internal/timer"
 	"log"
 	"strconv"
 	"strings"
@@ -47,18 +47,18 @@ var calculateTimeCmd = &cobra.Command{
 			currentTimer, err = time.Parse(layout, calculateTime)
 			if err != nil {
 				t, _ := strconv.Atoi(calculateTime)
-				currentTimer=time.Unix(int64(t), 0)
+				currentTimer = time.Unix(int64(t), 0)
 			}
 		}
-		calculateTime,err:=timer.GetCalculateTime(currentTimer, duration)
-		if err!=nil {
+		calculateTime, err := timer.GetCalculateTime(currentTimer, duration)
+		if err != nil {
 			log.Fatalf("time.GetCalculateTime err: %v", err)
 		}
-		log.Printf("输出结果：%s, %d", calculateTime.Format(layout),calculateTime.Unix())
+		log.Printf("输出结果：%s, %d", calculateTime.Format(layout), calculateTime.Unix())
 	},
 }
 
-func init () {
+func init() {
 	timeCmd.AddCommand(nowTimeCmd)
 	timeCmd.AddCommand(calculateTimeCmd)
 	calculateTimeCmd.Flags().StringVarP(&calculateTime, "calculate", "c", "", `需要计算的时间，有效单位为时间戳或已格式化后的时间`)
