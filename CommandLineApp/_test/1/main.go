@@ -7,7 +7,7 @@ import (
 	"log"
 )
 
-//Name Name
+//Name 姓名
 type Name string
 
 func (n *Name) String() string {
